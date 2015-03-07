@@ -7,9 +7,9 @@
 
     <sws:annotation-driven/>
 
-    <bean id="releveNotesEndPoint" class="iaws.relevenotes.ws.contractfirst.ReleveNotesEndpoint">
+    <bean id="releveNotesEndpoint" class="iaws.relevenotes.ws.contractfirst.ReleveNotesEndpoint">
         <constructor-arg name="releveNotesService" ref="releveNotesService"/>
     </bean>
-    <bean id="releveNotesService" class="iaws.relevenotes.services.impl.DummyReleveNotesService" />
+    <bean id="releveNotesService" class="iaws.relevenotes.services.impl.DummyReleveNotesService"/>
 
 </beans>
