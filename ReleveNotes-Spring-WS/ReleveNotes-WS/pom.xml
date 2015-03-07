@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
-        <groupId>ExemplesWS</groupId>
+        <groupId>fr.ups.mdl.iaws</groupId>
         <artifactId>ReleveNotes-Spring-WS</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -13,7 +13,7 @@
     <artifactId>ReleveNotes-WS</artifactId>
 
     <packaging>war</packaging>
-    <name>Exemple-Spring-WS Spring-WS Application</name>
+    <name>ReleveNotes-WS Spring-WS Application</name>
     <url>http://www.springframework.org/spring-ws</url>
     <build>
         <finalName>ReleveNotes-WS</finalName>
@@ -35,7 +35,7 @@
             <artifactId>spring-ws-test</artifactId>
         </dependency>
         <dependency>
-            <groupId>ExemplesWS</groupId>
+            <groupId>fr.ups.mdl.iaws</groupId>
             <artifactId>ReleveNotes</artifactId>
         </dependency>
         <dependency>
