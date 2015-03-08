@@ -16,7 +16,7 @@
       <xs:element name="libelle">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="Interopérabilité Application Web Services"/>
+            <xs:enumeration value="Interopérabilité des Applications et Web Services"/>
             <xs:enumeration value="Java Entreprise Edition"/>
           </xs:restriction>
         </xs:simpleType>

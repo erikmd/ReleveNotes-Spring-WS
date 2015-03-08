@@ -51,7 +51,7 @@ public class DummyReleveNotesService implements ReleveNoteService {
         Matiere matiereIaws = new Matiere();
         matiereIaws.setId(598);
         matiereIaws.setCode("IAWS");
-        matiereIaws.setLibelle("Interopérabilité Application Web Services");
+        matiereIaws.setLibelle("Interopérabilité des Applications et Web Services");
 
         Matiere matiereJee = new Matiere();
         matiereJee.setId(421);

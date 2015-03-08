@@ -10,7 +10,7 @@ xsi:schemaLocation="http://iaws/ws/contractfirst/exemple ReleveNotes.xsd" annee_
     </etudiant>
     <matiere id="598">
         <code>IAWS</code>
-        <libelle>Interopérabilité Application Web Services</libelle>
+        <libelle>Interopérabilité des Applications et Web Services</libelle>
     </matiere>
     <matiere id="421">
         <code>JEE</code>
