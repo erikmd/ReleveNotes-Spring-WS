@@ -5,12 +5,13 @@ import iaws.relevenotes.domain.nomenclature.AnneeScolaire;
 import iaws.relevenotes.domain.nomenclature.Niveau;
 import iaws.relevenotes.domain.nomenclature.Semestre;
 import iaws.relevenotes.services.ReleveNoteService;
+
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import org.springframework.ws.server.endpoint.annotation.Namespace;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import org.springframework.ws.server.endpoint.annotation.XPathParam;
 import org.w3c.dom.Element;
-
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
  * @author franck Silvestre
  */
 
+@Endpoint
 public class ReleveNotesEndpoint {
     private ReleveNoteService releveNotesService;
 
@@ -27,8 +29,10 @@ public class ReleveNotesEndpoint {
         this.releveNotesService = releveNotesService;
     }
 
-
-    public Element handleReleveNotesRequest(String anneeScol,  String niveauCode, Integer semestreId) throws Exception {
+    @PayloadRoot(localPart = "ReleveNotesRequest", namespace = NAMESPACE_URI)
+    @ResponsePayload
+    @Namespace(uri = NAMESPACE_URI, prefix="rn")
+    public Element handleReleveNotesRequest(@XPathParam("/rn:ReleveNotesRequest/rn:annee_scolaire") String anneeScol,@XPathParam("/rn:ReleveNotesRequest/rn:niveau")  String niveauCode,@XPathParam("/rn:ReleveNotesRequest/rn:semestre") Integer semestreId) throws Exception {
 
         // parse le XML de ReleveNotesRequest pour extraire les informations de
         // l'année scolaire, du niveau et du semestre  et creer les objets ad-hoc
