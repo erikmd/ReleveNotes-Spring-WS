@@ -7,11 +7,20 @@
        http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services-2.0.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<sws:annotation-driven/>
+    <sws:annotation-driven/>
 
-	<bean id="releveNotesEndpoint" class="iaws.relevenotes.ws.contractfirst.ReleveNotesEndpoint">
-		<constructor-arg name="releveNotesService" ref="releveNotesService"/>
-	</bean>
-	<bean id="releveNotesService" class="iaws.relevenotes.services.impl.DummyReleveNotesService"/>
+    <context:component-scan base-package="iaws.relevenotes.ws.contractfirst"/>
+    <!-- Remarque : on pourrait se passer du component-scanning
+         ainsi que de l'annotation @Autowired dans ReleveNotesEndpoint.java ;
+         mais dans ce cas il faudrait déclarer explicitement l'endpoint et
+         le service passé à son constructeur, de la façon suivante :
+
+         <bean id="releveNotesEndpoint"
+               class="iaws.relevenotes.ws.contractfirst.ReleveNotesEndpoint">
+           <constructor-arg name="releveNotesService" ref="releveNotesService"/>
+         </bean>
+    -->
+
+    <bean id="releveNotesService" class="iaws.relevenotes.services.impl.DummyReleveNotesService"/>
 
 </beans>
