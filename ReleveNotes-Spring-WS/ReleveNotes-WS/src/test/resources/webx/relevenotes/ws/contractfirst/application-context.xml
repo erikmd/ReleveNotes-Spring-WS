@@ -8,19 +8,7 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <sws:annotation-driven/>
-
     <context:component-scan base-package="webx.relevenotes.ws.contractfirst"/>
-    <!-- Remarque : on pourrait se passer du component-scanning
-         ainsi que de l'annotation @Autowired dans ReleveNotesEndpoint.java ;
-         mais dans ce cas il faudrait déclarer explicitement l'endpoint et
-         le service passé à son constructeur, de la façon suivante :
-
-         <bean id="releveNotesEndpoint"
-               class="webx.relevenotes.ws.contractfirst.ReleveNotesEndpoint">
-           <constructor-arg name="releveNotesService" ref="releveNotesService"/>
-         </bean>
-    -->
-
     <bean id="releveNotesService" class="webx.relevenotes.services.impl.DummyReleveNotesService"/>
 
 </beans>

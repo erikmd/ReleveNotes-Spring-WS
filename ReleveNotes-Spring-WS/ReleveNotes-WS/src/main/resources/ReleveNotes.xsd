@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iaws/ws/contractfirst/exemple" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://webx/ws/contractfirst/exemple" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="ReleveNotes" type="exem:ReleveNotesType" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+    <xs:element name="ReleveNotes" type="exem:ReleveNotesType" xmlns:exem="http://webx/ws/contractfirst/exemple"/>
 
     <xs:complexType name="matiereType">
     <xs:all>
       <xs:element name="code">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="IAWS"/>
+            <xs:enumeration value="WEBX"/>
             <xs:enumeration value="JEE"/>
           </xs:restriction>
         </xs:simpleType>
@@ -62,16 +62,16 @@
 
     <xs:complexType name="ReleveNotesType">
     <xs:sequence>
-      <xs:element type="exem:etudiantType" name="etudiant" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
-      <xs:element type="exem:matiereType" name="matiere" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
-      <xs:element type="exem:evaluationType" name="evaluation" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+      <xs:element type="exem:etudiantType" name="etudiant" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://webx/ws/contractfirst/exemple"/>
+      <xs:element type="exem:matiereType" name="matiere" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://webx/ws/contractfirst/exemple"/>
+      <xs:element type="exem:evaluationType" name="evaluation" maxOccurs="unbounded" minOccurs="1" xmlns:exem="http://webx/ws/contractfirst/exemple"/>
     </xs:sequence>
     <xs:attribute type="xs:string" name="annee_scolaire"/>
     <xs:attribute type="xs:string" name="niveau"/>
     <xs:attribute type="xs:short" name="semestre"/>
   </xs:complexType>
 
-    <xs:element name="ReleveNotesRequest" type="exem:ReleveNotesRequestType" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+    <xs:element name="ReleveNotesRequest" type="exem:ReleveNotesRequestType" xmlns:exem="http://webx/ws/contractfirst/exemple"/>
 
     <xs:complexType name="ReleveNotesRequestType">
         <xs:all>
