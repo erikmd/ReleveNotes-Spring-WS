@@ -13,32 +13,6 @@
         <module>ReleveNotes</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.ws</groupId>
-                <artifactId>spring-ws-core</artifactId>
-                <version>2.1.4.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.ws</groupId>
-                <artifactId>spring-ws-test</artifactId>
-                <version>2.1.4.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>fr.ups.mdl.webx</groupId>
-                <artifactId>ReleveNotes</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <reporting>
         <plugins>
             <plugin>
