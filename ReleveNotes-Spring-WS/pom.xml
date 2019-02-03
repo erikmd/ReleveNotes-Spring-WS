@@ -14,8 +14,9 @@
 
   <artifactId>ReleveNotes-Spring-WS</artifactId>
 
-  <!-- Ceci est la version de l'application complète "multi-modules" -->
-  <version>0.1.0-SNAPSHOT</version>
+  <!-- Version de l'application complète (multi-modules) utilisant la
+       variable définie dans "ReleveNotes-parent/pom.xml" -->
+  <version>${ReleveNotes-WS.version}</version>
 
   <!-- Agrège plusieurs modules Maven -->
   <packaging>pom</packaging>

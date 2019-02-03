@@ -12,7 +12,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>ReleveNotes-WS</artifactId>
-  <name>ReleveNotes-WS (Spring-WS)</name>
+  <name>ReleveNotes-WS</name>
+  <version>${ReleveNotes-WS.version}</version>
 
   <packaging>war</packaging>
   <url>http://www.springframework.org/spring-ws</url>

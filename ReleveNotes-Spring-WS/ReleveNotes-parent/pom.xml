@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Tip: change the version in only place in the multi-module project -->
+    <ReleveNotes.version>1.0.0</ReleveNotes.version>
+    <ReleveNotes-WS.version>0.1.0-SNAPSHOT</ReleveNotes-WS.version>
   </properties>
 
   <distributionManagement>
@@ -26,7 +29,7 @@
       <dependency>
         <groupId>fr.ups.mdl.webx</groupId>
         <artifactId>ReleveNotes</artifactId>
-        <version>1.0.0</version>
+        <version>${ReleveNotes.version}</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
