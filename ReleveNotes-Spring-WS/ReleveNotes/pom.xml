@@ -2,20 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>ReleveNotes-parent</artifactId>
-        <groupId>fr.ups.mdl.webx</groupId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../ReleveNotes-parent/pom.xml</relativePath>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fr.ups.mdl.webx</groupId>
+    <artifactId>ReleveNotes-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../ReleveNotes-parent/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ReleveNotes</artifactId>
+  <artifactId>ReleveNotes</artifactId>
+  <name>ReleveNotes</name>
+  <!-- Si change cette version, changer également la version de
+       "fr.ups.mdl.webx:ReleveNotes" dans "../ReleveNotes-parent/pom.xml" -->
+  <version>1.0.0</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
 </project>

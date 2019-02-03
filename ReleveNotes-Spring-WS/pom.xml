@@ -2,32 +2,62 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
+  <!-- Importe les infos du POM parent -->
+  <parent>
     <groupId>fr.ups.mdl.webx</groupId>
-    <artifactId>ReleveNotes-Spring-WS</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>ReleveNotes-WS</module>
-        <module>ReleveNotes</module>
-    </modules>
+    <artifactId>ReleveNotes-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>ReleveNotes-parent/pom.xml</relativePath>
+  </parent>
 
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.20.1</version>
-                <configuration>
-                    <aggregate>true</aggregate>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
-        </plugins>
-    </reporting>
+  <artifactId>ReleveNotes-Spring-WS</artifactId>
+
+  <!-- Ceci est la version de l'application complète "multi-modules" -->
+  <version>0.1.0-SNAPSHOT</version>
+
+  <!-- Agrège plusieurs modules Maven -->
+  <packaging>pom</packaging>
+  <modules>
+    <module>ReleveNotes-WS</module>
+    <module>ReleveNotes</module>
+  </modules>
+
+  <!-- Plugins pour "mvn clean site site:stage" avec aggregate=true -->
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.3</version>
+        <configuration>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.20.1</version>
+        <configuration>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.5</version>
+        <reportSets>
+          <reportSet>
+            <id>aggregate</id>
+            <reports>
+              <report>aggregate</report>
+              <report>test-aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
 </project>
